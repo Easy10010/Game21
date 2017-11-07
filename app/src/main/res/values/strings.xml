@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Game21</string>
+    <string name="btnText_rules">详细规则</string>
+    <string name="btnText_startGame">开始游戏</string>
+    <string name="btnText_exit">退出游戏</string>
+    <string name="btnText_history">查看战绩</string>
+    <string name="btnText_newGame">再来一局</string>
+    <string name="btnText_leave">离开</string>
+    <string name="btnText_oneMore">再来一张</string>
+    <string name="btnText_done">停牌</string>
+    <string name="showCurrPoints">当前点数: %d</string>
+    <string name="confirm2exitGame">再按一次退出游戏, 游戏数据将丢失</string>
+    <string name="gameResult" formatted="false">%s \n Bot:%d      Gamer:%d
+    </string>
+
+    <string name="GAME_IS_OVER">这局游戏已经结束</string>
+    <string name="POINT_GREATER_THEN_21">你的游戏点数大于21不能再要牌了</string>
+    <string name="MORE_THEN_FIVE_CARD">手里的牌最多只能有5张</string>
+    <string name="YOU_ARE_READIED">你已经准备了</string>
+
+
+    <string name="createTableSql">
+        CREATE TABLE IF NOT EXISTS game_history(
+            id integer primary key autoincrement,
+            timestamp,
+            gamestatus,
+            bot_points,
+            bot_cards,
+            gamer_points,
+            gamer_cards,
+            addEXP
+        )
+    </string>
+    <string name="createEXPTableSql">
+        CREATE TABLE IF NOT EXISTS game_exp(
+            id integer primary key autoincrement,
+            exp
+        )
+    </string>
+</resources>

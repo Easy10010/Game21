@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--填充背景色 -->
+    <solid android:color="#ffff00" />
+    <!--描边 他需要 2个参数，颜色 第二参数 宽度 -->
+    <stroke
+        android:width="2dp"
+    android:color="#00000000" />
+    <!-- 设置弧度  Radius设置所有角的弧度 -->
+    <corners
+    android:bottomLeftRadius="20dp"
+    android:bottomRightRadius="20dp"
+    android:topLeftRadius="20dp"
+    android:topRightRadius="20dp" />
+<corners
+    android:radius="0dp"         />
+    <!-- 渐变色 startColor 起始颜色  endColor最终颜色  type类型(如果类型为radial（径向渐变，一个圆心以半径的方式渐变），必须加上   android:gradientRadius="**")-->
+    <gradient
+        android:startColor="@color/global_backgroundcolor"
+    android:endColor="@color/global_foregroundcolor"
+    android:type="linear" />
+    <!--内容与边框的间距-->
+    <padding
+        android:bottom="15dp"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="15dp" />
+    <!--如果设置了渐变色 那么背景颜色将不显示 -->
+</shape>

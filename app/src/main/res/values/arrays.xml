@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="GAME_STATUS">
+        <item name="GAME_STATUS_BOT_WIN">电脑赢</item>
+        <item name="GAME_STATUS_GAMER_WIN">你赢了</item>
+        <item name="GAME_STATUS_BOTH_WIN">平局</item>
+        <item name="GAME_STATUS_BOTH_LOSE">都输了</item>
+    </string-array>
+    <string-array name="LEVEL_NAME">
+        <item name="LEVEL1">菜鸟</item>
+        <item name="LEVEL2">弱鸡</item>
+        <item name="LEVEL3">新手</item>
+        <item name="LEVEL4">高手</item>
+        <item name="LEVEL5">老司机</item>
+        <item name="LEVEL6">赌侠</item>
+        <item name="LEVEL7">赌神</item>
+        <item name="LEVEL8">赌圣</item>
+    </string-array>
+
+    <integer-array name="LEVEL_EXP">
+        <item name="LEVEL1">0</item>
+        <item name="LEVEL2">60</item>
+        <item name="LEVEL3">180</item>
+        <item name="LEVEL4">360</item>
+        <item name="LEVEL5">600</item>
+        <item name="LEVEL6">1080</item>
+        <item name="LEVEL7">3240</item>
+        <item name="LEVEL8">4680</item>
+    </integer-array>
+</resources>
