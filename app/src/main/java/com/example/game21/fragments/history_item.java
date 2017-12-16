@@ -90,10 +90,10 @@ public class history_item extends Fragment {
         );
         TextView tv_addEXP = ((TextView)v.findViewById(R.id.addEXP));
         if (Integer.parseInt(args[6]) < 0){
-            tv_addEXP.setText(String.format("- %d EXP",-Integer.parseInt(args[6])));
+            tv_addEXP.setText(String.format("- %d exp",-Integer.parseInt(args[6])));
 //            tv_addEXP.setTextColor(Color.parseColor("#cc0000"));
         }else{
-            tv_addEXP.setText(String.format("+ %s EXP",args[6]));
+            tv_addEXP.setText(String.format("+ %s exp",args[6]));
         }
 
         ((TextView)v.findViewById(R.id.textView9)).setText("BOT\n"+args[2]);
