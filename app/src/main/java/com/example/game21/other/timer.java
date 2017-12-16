@@ -4,8 +4,6 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.graphics.PorterDuff;
-import android.util.Log;
-import android.view.animation.Animation;
 
 
 /**
@@ -31,6 +29,7 @@ public class timer {
         listener = l;
         setMillis(Millis);
     }
+
     private timer resetAnima(){
         mAnimatorSet = new AnimatorSet();
 
@@ -38,7 +37,7 @@ public class timer {
         mAnimator_color = null;
         if (progressBarGradientColor[0] != 0 && progressBarGradientColor[1] != 0) {
             mAnimator_color = ValueAnimator.ofInt(0,100);
-            final GradientColor g = new GradientColor(progressBarGradientColor[0], progressBarGradientColor[1]);
+            final gradientColor g = new gradientColor(progressBarGradientColor[0], progressBarGradientColor[1]);
             mAnimator_color.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator valueAnimator) {

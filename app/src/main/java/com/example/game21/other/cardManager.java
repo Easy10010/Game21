@@ -254,7 +254,7 @@ public class cardManager {
     }
 
     private int calcAddEXP() {
-        return EXP.calcEXP(bot_cards.size(), bot_curr_points, gamer_cards.size(), gamer_curr_points);
+        return exp.calcEXP(bot_cards.size(), bot_curr_points, gamer_cards.size(), gamer_curr_points);
     }
 
     public void setReady(int identity) {

@@ -18,7 +18,6 @@ public class senceManager {
     Context mContext;
     Activity mActivity;
 
-    private static long Duration = 1000;
     public final fragmentsManager fm;
 
     public senceManager(Context context) {
@@ -52,7 +51,7 @@ public class senceManager {
         View v = fm.get("game_result_sence").getView();
         ProgressBar pb = (ProgressBar) v.findViewById(R.id.progressBar_currEXP);
         TextView tv = (TextView) v.findViewById(R.id.textView3);
-        EXP expClass = new EXP(mContext, currEXP);
+        exp expClass = new exp(mContext, currEXP);
 
         if (addEXP < 0 ){
             pb.getProgressDrawable().setColorFilter(
@@ -93,7 +92,7 @@ public class senceManager {
                     anim.end();
                     anim.cancel();
                     pb.setMax(NextLevelEXP);
-                    _progressBar(pb, tv, 0, to, new EXP(mContext, value).getNextLevelEXP(),0);
+                    _progressBar(pb, tv, 0, to, new exp(mContext, value).getNextLevelEXP(),0);
                 }
             }
         };

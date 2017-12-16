@@ -8,12 +8,12 @@ import com.example.game21.R;
  * Created by Yuann72 on 2017/11/3.
  */
 
-public class EXP {
+public class exp {
     private int CurrEXP, CurrLevelEXP, NextLevelEXP;
     private String CurrLevelName;
     private Context mContext;
 
-    public EXP(Context ctx) {
+    public exp(Context ctx) {
         mContext = ctx;
         database db = new database(ctx);
         CurrEXP = db.getEXP();
@@ -21,7 +21,7 @@ public class EXP {
         calcMaxEXP();
     }
 
-    public EXP(Context ctx, int _currEXP) {
+    public exp(Context ctx, int _currEXP) {
         mContext = ctx;
         CurrEXP = _currEXP;
         calcMaxEXP();

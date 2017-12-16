@@ -8,10 +8,10 @@
     </string-array>
     <string-array name="LEVEL_NAME">
         <item name="LEVEL1">菜鸟</item>
-        <item name="LEVEL2">弱鸡</item>
-        <item name="LEVEL3">新手</item>
+        <item name="LEVEL2">新手</item>
+        <item name="LEVEL3">入门</item>
         <item name="LEVEL4">高手</item>
-        <item name="LEVEL5">老司机</item>
+        <item name="LEVEL5">大神</item>
         <item name="LEVEL6">赌侠</item>
         <item name="LEVEL7">赌神</item>
         <item name="LEVEL8">赌圣</item>

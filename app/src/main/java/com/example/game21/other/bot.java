@@ -23,7 +23,6 @@ public class bot {
     private boolean nextAction() {
         int AcardNum = 0;
         int basicPoint = 0;
-        int max = 0;
         ArrayList<Integer> resultList = new ArrayList();
 
         for (Object point : points) {
@@ -43,11 +42,8 @@ public class bot {
         for (Integer p : resultList) {
             getOneMore += check(p) ? 1 : -1;
         }
-        if (getOneMore > 0)
-            return true;
-        else if (getOneMore < 0)
-            return false;
-        return false; // 爆炸和不爆炸的概率一样 保守派就返回false
+        // 爆炸和不爆炸的概率一样 保守派就返回false
+        return getOneMore <= 0 ? false : true;
     }
 
     private void nextAction_loop(int basic, int left, ArrayList<Integer> resultList) {

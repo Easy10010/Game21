@@ -2,17 +2,17 @@ package com.example.game21.other;
 
 import android.graphics.Color;
 
-public class GradientColor{
+public class gradientColor {
     float fR,fG,fB;
     float addR,addG,addB;
     float tR,tG,tB;
 
     private int count = 100;
 
-    GradientColor(String fromColor, String toColor){
+    gradientColor(String fromColor, String toColor){
         parseColor(Color.parseColor(fromColor), Color.parseColor(toColor));
     }
-    GradientColor(int fromColor,int toColor){
+    gradientColor(int fromColor, int toColor){
         parseColor(fromColor,toColor);
     }
     void parseColor(int fromColor,int toColor){

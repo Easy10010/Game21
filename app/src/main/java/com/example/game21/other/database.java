@@ -4,7 +4,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import com.example.game21.R;
 
@@ -34,14 +33,13 @@ public class database extends SQLiteOpenHelper {
         db.execSQL(sql);
         db.execSQL(sql2);
         db.execSQL(sql3, new Object[]{0,0});
-//        db.close();
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }
 
-    public void reset() {
+    public void dropAllTable() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DROP TABLE IF EXISTS game_history");
         db.execSQL("DROP TABLE IF EXISTS game_exp");
@@ -52,7 +50,6 @@ public class database extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String sql = "INSERT INTO game_history VALUES (?,?,?,?,?,?,?,?)";
         db.execSQL(sql, data);
-//        db.close();
         return this;
     }
 
@@ -60,7 +57,6 @@ public class database extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String sql = "UPDATE game_exp SET exp = ? WHERE id = 0";
         db.execSQL(sql, new Object[]{EXP});
-//        db.close();
         return this;
     }
     public database addEXP(int add) {
@@ -70,7 +66,6 @@ public class database extends SQLiteOpenHelper {
         int currEXP = cursor.getInt(1) + add;
         String sql = "UPDATE game_exp SET exp = ? WHERE id = 0";
         db.execSQL(sql, new Object[]{currEXP});
-//        db.close();
         return this;
     }
     public int getEXP() {
@@ -78,7 +73,6 @@ public class database extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("select * from game_exp where id=0", null);
         cursor.moveToNext();
         int EXP = cursor.getInt(1);
-//        db.close();
         return EXP;
     }
 
@@ -88,10 +82,13 @@ public class database extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public database removeAllData() {
+    public database removeHistoryData() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("DELETE FROM game_history WHERE timestamp = 'test0' ");
-//        db.close();
+        db.execSQL("DELETE FROM game_history");
+        return this;
+    }
+    public database resetExp() {
+        updateEXP(0);
         return this;
     }
 }
